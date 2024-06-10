@@ -1,0 +1,24 @@
+{
+  "name": "graphql-easy-mock",
+  "version": "1.0.0",
+  "author": "Midori<https://github.com/midori-profile>",
+  "type": "module",
+  "scripts": {
+    "watch": "rollup -c -w",
+    "prebuild": "rm -rf dist",
+    "build:script": "rollup -c",
+    "build:popup": "echo 'Building popup' && cd src/ui && pnpm install && pnpm run build && mv popup ../../dist/popup && rm -rf dist && rm -rf popup",
+    "build": "pnpm prebuild && concurrently \"pnpm build:popup\" \"pnpm build:script\""
+  },
+  "dependencies": {
+    "typescript": "^5.0.4"
+  },
+  "devDependencies": {
+    "@rollup/plugin-terser": "^0.4.3",
+    "@rollup/plugin-typescript": "^11.1.1",
+    "@types/chrome": "^0.0.237",
+    "concurrently": "^8.0.1",
+    "rollup": "^3.23.0",
+    "rollup-plugin-copy": "^3.5.0"
+  }
+}

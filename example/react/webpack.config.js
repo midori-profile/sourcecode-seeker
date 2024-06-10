@@ -25,6 +25,7 @@ module.exports = {
       template: "./public/index.html",
     }),
   ],
+  devtool: "source-map", // 启用 source maps
   devServer: {
     static: {
       directory: path.join(__dirname, "dist"),

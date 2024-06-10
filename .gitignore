@@ -1,48 +1,5 @@
-# Dependencies #
-/node_modules
+node_modules
 
-# Build output #
-/dist
-/build
+dist/*
 
-# TypeScript build artifacts #
-*.tsbuildinfo
-*.log
-
-# Environment configuration files #
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
-# Editor directories and files #
-.idea
-.vscode
-*.swp
-*.swo
-
-# Operating system generated files #
-.DS_Store
-Thumbs.db
-
-# Yarn #
-.yarn
-.yarn-error.log
-.pnp.js
-.pnp.unplugged/
-.yarn/cache/
-.yarn/unplugged/
-.yarn/build-state.yml
-.yarn/install-state.gz
-
-# NPM #
-package-lock.json
-npm-debug.log*
-
-# Others #
-/.pnp
-
-# example #
-/example/react/node_modules/
-/example/react/dist/
+example/*
