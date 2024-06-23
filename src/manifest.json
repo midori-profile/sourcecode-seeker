@@ -1,0 +1,49 @@
+{
+  "name": "Sourcecode Seeker",
+  "version": "1.0.0",
+  "description": "Sourcecode Seeker",
+  "manifest_version": 3,
+  
+  "permissions": [
+    "storage",
+    "declarativeNetRequest"
+  ],
+  "host_permissions": [
+    "https://*/*"
+  ],
+  
+  "action": {
+    "default_popup": "popup/index.html"
+  },
+
+  "icons": {
+    "16": "images/sourcecode.png",
+    "32": "images/sourcecode.png",
+    "48": "images/sourcecode.png",
+    "128": "images/sourcecode.png"
+  },
+
+  "background": {
+    "service_worker": "serviceWorker.js"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["https://*/*", "http://*/*"],
+      "js": ["content.js"],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ],
+
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "utils.js",
+        "content.js",
+        "serviceWorker.js"
+      ],
+      "matches": ["https://*/*", "http://*/*"]
+    }
+  ]
+}
