@@ -1,7 +1,3 @@
 node_modules
 
-dist/*
-
-example/*
-
-src/.DS_Store
+.DS_Store
