@@ -1,0 +1,49 @@
+{
+  "name": "Graphql Easy Mock",
+  "version": "1.0.0",
+  "description": "Graphql Easy Mock",
+  "manifest_version": 3,
+  
+  "permissions": [
+    "storage",
+    "declarativeNetRequest"
+  ],
+  "host_permissions": [
+    "https://*/*"
+  ],
+  
+  "action": {
+    "default_popup": "popup/index.html"
+  },
+
+  "icons": {
+    "16": "images/graphql.png",
+    "32": "images/graphql.png",
+    "48": "images/graphql.png",
+    "128": "images/graphql.png"
+  },
+
+  "background": {
+    "service_worker": "serviceWorker.js"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["https://*/*", "http://*/*"],
+      "js": ["content.js"],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ],
+
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "utils.js",
+        "content.js",
+        "serviceWorker.js"
+      ],
+      "matches": ["https://*/*", "http://*/*"]
+    }
+  ]
+}
