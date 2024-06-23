@@ -10,7 +10,7 @@ const createEmptyRules = (): chrome.declarativeNetRequest.Rule[] => {
 };
 
 const applyRules = async (): Promise<void> => {
-  const iconPath = appSetting.pluginSwitchOn ? '/images/graphql.png' : '/images/graphql-disable.png';
+  const iconPath = appSetting.pluginSwitchOn ? '/images/sourcecode.png' : '/images/sourcecode-disable.png';
   chrome.action.setIcon({ path: iconPath });
 
   const currentRuleIds = (await chrome.declarativeNetRequest.getDynamicRules()).map((rule) => rule.id);
@@ -30,7 +30,7 @@ const loadStoredSettings = (): void => {
       appSetting = { pluginSwitchOn: storage[KEY].pluginSwitchOn || false };
       applyRules();
     } else {
-      chrome.action.setIcon({ path: '/images/graphql-disable.png' });
+      chrome.action.setIcon({ path: '/images/sourcecode-disable.png' });
     }
   });
 };

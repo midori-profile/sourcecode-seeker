@@ -167,7 +167,7 @@ export const handleMessageEvent = async (generate: Generate) => {
     const {
       entrypoints = [],
       blockResourceRules = [],
-      ajaxRules = [],
+      // ajaxRules = [],
       staticResourceRules = [],
       mainFrameText,
     } = await generate(graphQLPluginSetting, isFirstExecution);
@@ -175,7 +175,7 @@ export const handleMessageEvent = async (generate: Generate) => {
     return {
       entrypoints,
       blockResourceRules,
-      ajaxRules,
+      // ajaxRules,
       staticResourceRules,
       mainFrameText,
     };
@@ -186,7 +186,7 @@ export const handleMessageEvent = async (generate: Generate) => {
       window.sessionStorage.setItem(ALERT_KEY, "true");
       if (isFirstExecution) {
         console.log(
-          "🚀 Graphql Easy Mock is running in your website for the first time!"
+          "🚀 Source code seeker is running in your website for the first time!"
         );
       }
     }
@@ -201,7 +201,7 @@ export const handleMessageEvent = async (generate: Generate) => {
       }
   
       if (isPluginEnabled) {
-        document.title = `${document.title} (GraphQL Easy Mock)`;
+        document.title = `${document.title} (Source code seeker)`;  
       }
   
       isFirstExecution = false;
@@ -216,7 +216,7 @@ export const handleMessageEvent = async (generate: Generate) => {
         const {
           entrypoints,
           blockResourceRules,
-          ajaxRules,
+          // ajaxRules,
           staticResourceRules,
           mainFrameText,
         } = await handlePluginSetting(data);
@@ -224,7 +224,7 @@ export const handleMessageEvent = async (generate: Generate) => {
         const isPluginEnabled =
           entrypoints.length > 0 ||
           blockResourceRules.length > 0 ||
-          ajaxRules.length > 0 ||
+          // ajaxRules.length > 0 ||
           staticResourceRules.length > 0;
   
         handlePluginEnabled(isPluginEnabled);

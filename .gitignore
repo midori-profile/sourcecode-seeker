@@ -3,3 +3,5 @@ node_modules
 dist/*
 
 example/*
+
+src/.DS_Store

@@ -1,7 +1,7 @@
 {
-  "name": "Graphql Easy Mock",
+  "name": "Sourcecode Seeker",
   "version": "1.0.0",
-  "description": "Graphql Easy Mock",
+  "description": "Sourcecode Seeker",
   "manifest_version": 3,
   
   "permissions": [
@@ -17,10 +17,10 @@
   },
 
   "icons": {
-    "16": "images/graphql.png",
-    "32": "images/graphql.png",
-    "48": "images/graphql.png",
-    "128": "images/graphql.png"
+    "16": "images/sourcecode.png",
+    "32": "images/sourcecode.png",
+    "48": "images/sourcecode.png",
+    "128": "images/sourcecode.png"
   },
 
   "background": {

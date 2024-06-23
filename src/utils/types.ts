@@ -29,7 +29,7 @@ export type App = {
 export type ApplicationRule = {
   blockResourceRules: RegExp[];
   entrypoints: string[];
-  ajaxRules: AjaxRule[];
+  // ajaxRules: AjaxRule[];
   staticResourceRules: StaticResourceRule[];
   mainFrameText?: string;
 };
@@ -40,36 +40,36 @@ export type Generate = (
 ) => Promise<ApplicationRule>;
 
 // rule
-export type AjaxRule = {
-  filter: (request: {
-    method: string;
-    url: string;
-    headers: Record<string, string>;
-    body?: BodyInit;
-  }) => boolean;
-  modifyRequest?: (request: {
-    method: string;
-    url: string;
-    headers: Record<string, string>;
-  }) => {
-    url?: string;
-    headers?: Record<string, string>;
-    delay?: number;
-  };
-  modifyResponse?: (response?: any) => string;
-  type?: TYPE;
-  statusCode?: number;
-};
+// export type AjaxRule = {
+//   filter: (request: {
+//     method: string;
+//     url: string;
+//     headers: Record<string, string>;
+//     body?: BodyInit;
+//   }) => boolean;
+//   modifyRequest?: (request: {
+//     method: string;
+//     url: string;
+//     headers: Record<string, string>;
+//   }) => {
+//     url?: string;
+//     headers?: Record<string, string>;
+//     delay?: number;
+//   };
+//   modifyResponse?: (response?: any) => string;
+//   type?: TYPE;
+//   statusCode?: number;
+// };
 
 export type StaticResourceRule = {
   filter: (url: string) => boolean;
   target: (url: string) => string;
 };
 
-export type Rules = {
-  ajaxRules: AjaxRule[];
-  staticResourceRules: StaticResourceRule[];
-};
+// export type Rules = {
+//   ajaxRules: AjaxRule[];
+//   staticResourceRules: StaticResourceRule[];
+// };
 
 export type ResponseSetting = {
   type?: TYPE;
