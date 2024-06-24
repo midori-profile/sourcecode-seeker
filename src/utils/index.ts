@@ -6,7 +6,6 @@ import { Generate } from "./types";
 const generateRules: Generate = async (
   graphQLPluginSetting
 ) => {
-  console.log('graphQLPluginSetting?.pluginSwitchOn: ', graphQLPluginSetting?.pluginSwitchOn);
   if (graphQLPluginSetting?.pluginSwitchOn) {
     openComponentInEditor();
   }
