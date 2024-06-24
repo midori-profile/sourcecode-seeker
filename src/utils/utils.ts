@@ -112,9 +112,7 @@ export const openComponentInEditor = () => {
     if (event.altKey) {
       const { target } = event;
       if (target instanceof HTMLElement) {
-        console.log("Element clicked:", target);
         const debugSource = getDebugSource(target);
-        console.log("Debug source:", debugSource);
         if (!debugSource) {
           console.warn("Couldn't find debug source for element:", target);
           return;

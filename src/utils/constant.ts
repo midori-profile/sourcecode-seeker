@@ -28,5 +28,5 @@ export const DEFAULT_APPLICATION_RULE: ApplicationRule = {
   blockResourceRules: [],
   entrypoints: [],
   staticResourceRules: [],
-  ajaxRules: [],
+  // ajaxRules: [],
 };
